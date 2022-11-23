@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-n script that fetches a url'''
+'''a python script that fetches a url'''
 
 
 
