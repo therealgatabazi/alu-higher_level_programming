@@ -1,12 +1,17 @@
 #!/usr/bin/node
 
-const arg = process.argv[2];
-const Numbcheck = Number.isInteger(arg);
+const args = process.argv.slice(2);
 
-if (!Numbcheck === true) {
-  console.log(`My number: ${arg}`);
-}
+const number = parseInt(args[0]);
 
-if (!Numbcheck === false) {
+if (number === undefined) {
   console.log('Not a number');
+} else {
+  if (isNaN(number)) {
+    console.log('Not a number');
+  } else {
+    if (typeof (number) === 'number') {
+      console.log('My number: ' + number);
+    }
+  }
 }
